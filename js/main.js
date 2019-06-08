@@ -9,9 +9,12 @@ client.init(
   app_id,
   function() {
     console.log("AgoraRTC client initialized");
-    $.get("test.php", function(data) {
-      alert("Data Loaded: " + data);
-    });
+    $.get(
+      "https://tardis-demo.herokuapp.com/access_token?channel=test&uid=1234",
+      function(data) {
+        console.log("Data Loaded: " + data);
+      }
+    );
   },
   function(err) {
     console.log("AgoraRTC client init failed", err);
@@ -28,7 +31,7 @@ localStream.init(
 );
 
 //tardis-demo.herokuapp.com/access_token?channel=test&uid=1234
-https: client.join(
+client.join(
   token,
   "test",
   uid,

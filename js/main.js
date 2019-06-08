@@ -11,7 +11,7 @@ client.init(
   function() {
     console.log("AgoraRTC client initialized");
     $.get(
-      "https://tardis-demo.herokuapp.com/access_token?channel=test&uid=1234",
+      "https://tardis-demo.herokuapp.com/access_token?channel=test&uid=" + uid,
       function(data) {
         token = data.token;
         console.log("Data Loaded: " + token);

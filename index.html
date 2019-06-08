@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Agora Web Sample</title>
+<title>TARDIS | AGORA Challenge</title>
 <link rel="stylesheet" href="vendor/bootstrap.min.css">
 <script src="AgoraRTCSDK-2.6.1.js"></script>
 <script src="vendor/jquery.js"></script>
@@ -100,7 +100,7 @@ function join() {
         localStream = AgoraRTC.createStream({streamID: uid, audio: true, cameraId: camera, microphoneId: microphone, video: document.getElementById("video").checked, screen: false});
         //localStream = AgoraRTC.createStream({streamID: uid, audio: false, cameraId: camera, microphoneId: microphone, video: false, screen: true, extensionId: 'minllpmhdgpndnkomcoccfekfegnlikg'});
         if (document.getElementById("video").checked) {
-          localStream.setVideoProfile('720p_3');
+          localStream.setVideoProfile('360p_3');
 
         }
 

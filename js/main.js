@@ -1,3 +1,4 @@
+var localStream, camera, microphone;
 var client = AgoraRTC.createClient({ mode: "live", codec: "h264" });
 app_id = "88b765a2930f40cf8d0a5790701f043b";
 token = "";

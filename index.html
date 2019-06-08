@@ -8,7 +8,7 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
           
-<link rel="stylesheet" href="vendor/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="vendor/bootstrap.min.css"> -->
 <script src="AgoraRTCSDK-2.6.1.js"></script>
 <script src="vendor/jquery.js"></script>
 <script src="js/faker.js"></script>
@@ -27,10 +27,10 @@
       </nav>
             
 <div id="div_device" class="panel panel-default">
-<div class="select">
-<label for="audioSource">Audio source: </label><select id="audioSource"></select>
+<div class="select input-field">
+<label for="audioSource">Audio source: </label><select  id="audioSource"></select>
 </div>
-<div class="select">
+<div class="select input-field">
 <label for="videoSource">Video source: </label><select id="videoSource"></select>
 </div>
 </div>
@@ -39,7 +39,7 @@
 <div class="panel-body">
 <!-- App ID: <input id="appId" type="text" value="" size="36"></input> -->
 <!-- Channel: <input id="channel" type="text" value="test" size="4"></input> -->
-Host: <input id="video" type="checkbox" checked></input>
+ <input id="video" type="checkbox" checked></input>
 <button id="join" class="btn btn-primary" onclick="join()">Join</button>
 <button id="leave" class="btn btn-primary" onclick="leave()">Leave</button>
 <button id="publish" class="btn btn-primary" onclick="publish()">Publish</button>
@@ -68,7 +68,7 @@ Host: <input id="video" type="checkbox" checked></input>
 
 <script language="javascript">
 var uid_1 = faker.hacker.adjective();
-var uid_2 = faker.hacker.verb();
+var uid_2 = faker.name.firstName();
 uid = uid_1 + "-" + uid_2;
 token=""
 app_id="88b765a2930f40cf8d0a5790701f043b";
@@ -185,6 +185,7 @@ function join() {
       $('div#video').append('<div id="agora_remote'+stream.getId()+'" style="float:left; width:500px;height:500px;display:inline-block;"></div>');
     }
     stream.play('agora_remote' + stream.getId());
+    console.log("The other id is ",stream.getId())
   });
 
   client.on('stream-removed', function (evt) {
@@ -242,7 +243,7 @@ function getDevices() {
         option.text = device.label || 'camera ' + (videoSelect.length + 1);
         videoSelect.appendChild(option);
       } else {
-        console.log('Some other kind of source/device: ', device);
+        // console.log('Some other kind of source/device: ', device);
       }
     }
   });

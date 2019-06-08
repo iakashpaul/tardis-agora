@@ -20,32 +20,41 @@
 <body>
     <nav class="red darken-4">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">&nbsp; &nbsp;   <i class="material-icons">accessibility_new</i>&nbsp; TARDIS | Agora.io Challenge | AngelHack 2019</a>
+          <a href="#" class="brand-logo center">&nbsp; &nbsp;   <i class="material-icons">accessibility_new</i>&nbsp; TARDIS | Agora.io Challenge</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="https://www.hackathon.io/123843">Contact Us</a></li>
+            <li><a href="https://www.hackathon.io/123843">&nbsp;</a></li>
           </ul>
         </div>
       </nav>
             
-<div id="div_device">
+<!-- <div id="div_device"> -->
  
-<div class="select">
-<label for="audioSource">Audio Source: </label><select  class="browser-default col s12" id="audioSource"></select>
-</div>
-<div class="select">
-<label for="videoSource">Video Source: </label><select  class="browser-default col s12" id="videoSource"></select>
-</div>
-</div>
+
+<!-- </div> -->
 
 <div id="div_join" ><!---class="panel panel-default"-->
 <!-- <div class="panel-body"> -->
 <!-- App ID: <input id="appId" type="text" value="" size="36"></input> -->
 <!-- Channel: <input id="channel" type="text" value="test" size="4"></input> -->
  <input id="video" type="checkbox" checked></input>
-<button id="join" class="btn btn-primary blue darken-3" onclick="join()">Join</button>
-<button id="leave" class="btn btn-primary blue darken-3" onclick="leave()">Leave</button>
-<button id="publish" class="btn btn-primary blue darken-3" onclick="publish()">Publish</button>
-<button id="unpublish" class="btn btn-primary blue darken-3" onclick="unpublish()">Unpublish</button>
+
+
+<!-- <button id="leave" class="btn btn-primary btn-large blue darken-3" onclick="leave()">Leave</button> -->
+
+
+</div>
+<div class="card">
+<div class="row center">
+    <div class="col s3 m3 l3"><p><div class="select">
+        <label for="audioSource">Audio Source: </label><select  class="browser-default col s12" id="audioSource"></select>
+        </div>
+        </p></div>
+    <div class="col s6 m6 l6"><p><button id="join" class="btn btn-primary btn-medium blue darken-3" onclick="join()">Join<i class="material-icons left">call</i></button>&nbsp;<button id="publish" class="btn btn-primary btn-medium blue darken-3" onclick="publish()">Publish<i class="material-icons left">camera_alt</i></button>&nbsp;<button id="unpublish" class="btn btn-primary btn-medium blue darken-3" onclick="unpublish()">Unpublish<i class="material-icons left">videocam_off</i></button></p></div>
+    <div class="col s3 m3 l3"><p><div class="select">
+        <label for="videoSource">Video Source: </label><select  class="browser-default col s12" id="videoSource"></select>
+        </div></p></div>
+  </div>
 </div>
 <!-- </div> -->
 
@@ -63,8 +72,15 @@
             <div id="agora_local"></div>
         </div>
     </div-->
-    <canvas id="canvas" width="500" height="500"></canvas> 
-    <canvas id="canvas2" width="500" height="500"></canvas> 
+ 
+    <canvas id="canvas" width="500" height="500">
+    </canvas>
+  
+    
+      <canvas id="canvas2" width="500" height="500">
+
+      </canvas>
+   
 
     <br>
     <br>
@@ -74,6 +90,17 @@
 </div>
 
 <script language="javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+        
 var uid_1 = faker.hacker.adjective();
 var uid_2 = faker.name.firstName();
 uid = uid_1 + "-" + uid_2;
@@ -273,7 +300,7 @@ function drawKeypoints()  {
 
         
         ctx.beginPath();
-        ctx.arc(keypoint.position.x, keypoint.position.y, 15, 0, 2 * Math.PI);
+        ctx.arc(keypoint.position.x, keypoint.position.y, 10, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.fill()
       }
@@ -318,7 +345,7 @@ function drawKeypoints2()  {
           ctx2.fillStyle = "#00FF00";
         }
         ctx2.beginPath();
-        ctx2.arc(keypoint.position.x, keypoint.position.y, 15, 0, 2 * Math.PI);
+        ctx2.arc(keypoint.position.x, keypoint.position.y, 10, 0, 2 * Math.PI);
         ctx2.stroke();
         ctx2.fill()
 

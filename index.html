@@ -65,7 +65,7 @@
     </div-->
     <canvas id="canvas" width="500" height="500"></canvas> 
 <div id="video" style="margin:0 auto;">
-    <div id="agora_local" style="float:right;width:500px;height:500px;display:inline-block;"></div>
+    <div id="agora_local" style="float:right;width:500px;height:500px;display:none;"></div>
 </div>
 
 <script language="javascript">
@@ -184,7 +184,7 @@ function join() {
     var stream = evt.stream;
     console.log("Subscribe remote stream successfully: " + stream.getId());
     if ($('div#video #agora_remote'+stream.getId()).length === 0) {
-      $('div#video').append('<div id="agora_remote'+stream.getId()+'" style="float:left;width:500px;height:500px;display: none;"></div>');//display:inline-block
+      $('div#video').append('<div id="agora_remote'+stream.getId()+'" style="float:left;width:500px;height:500px;display:inline-block;"></div>');//
     }
     stream.play('agora_remote' + stream.getId());
     console.log("The other id is ",stream.getId())
@@ -192,6 +192,10 @@ function join() {
 var video = document.getElementById('video'+stream.getId());
 video.width=500;
 video.height=500;
+
+var local_video=document.getElementById('video'+uid);
+local_video.width=500;
+local_video.height=500;
 video.addEventListener('play', function () {
         console.log("#remoteVideo play");
       
@@ -202,7 +206,7 @@ var ctx = canvas.getContext('2d');
 let poses = [];
 function drawCameraIntoCanvas() {
   // Draw the video element into the canvas
-  ctx.drawImage(video, 0, 0, 500, 500);
+  ctx.drawImage(local_video, 0, 0, 500, 500);
   // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
   drawSkeleton();
@@ -218,7 +222,7 @@ poseNet.on('pose', gotPoses);
 // A function that gets called every time there's an update from the model
 function gotPoses(results) {
   poses = results;
-  console.log(poses)
+  // console.log(poses)
 }
 
 function modelReady() {
@@ -234,6 +238,7 @@ function drawKeypoints()  {
       let keypoint = poses[i].pose.keypoints[j];
       // Only draw an ellipse is the pose probability is bigger than 0.2
       if (keypoint.score > 0.2) {
+        // fill(213, 0, 143);
         ctx.beginPath();
         ctx.arc(keypoint.position.x, keypoint.position.y, 10, 0, 2 * Math.PI);
         ctx.stroke();
@@ -259,7 +264,7 @@ function drawSkeleton() {
 }
       }, false);
 
-      
+
 
 
   });

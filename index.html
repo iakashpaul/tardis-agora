@@ -286,7 +286,7 @@ function drawKeypoints2()  {
   // Loop through all the poses detected
   // for (let i = 0; i < poses2.length; i++) {
     // For each pose detected, loop through all the keypoints
-    if (poses.length > 0) {
+    if (poses2.length > 0) {
     for (let j = 0; j < poses2[0].pose.keypoints.length; j++) {
       let keypoint = poses2[0].pose.keypoints[j];
       // Only draw an ellipse is the pose probability is bigger than 0.2
@@ -305,7 +305,7 @@ function drawSkeleton2() {
   // Loop through all the skeletons detected
   // for (let i = 0; i < poses2.length; i++) {
     // For every skeleton, loop through all body connections
-    if (poses.length > 0) {
+    if (poses2.length > 0) {
     for (let j = 0; j < poses2[0].skeleton.length; j++) {
       let partA = poses2[0].skeleton[j][0];
       let partB = poses2[0].skeleton[j][1];

@@ -272,7 +272,7 @@ function drawSkeleton() {
   // for (let i = 0; i < poses.length; i++) {
     // For every skeleton, loop through all body connections
     if (poses.length > 0) {
-    for (let j = 0; j < poses[i].skeleton.length; j++) {
+    for (let j = 0; j < poses[0].skeleton.length; j++) {
       let partA = poses[0].skeleton[j][0];
       let partB = poses[0].skeleton[j][1];
       ctx.beginPath();
@@ -306,7 +306,7 @@ function drawSkeleton2() {
   // for (let i = 0; i < poses2.length; i++) {
     // For every skeleton, loop through all body connections
     if (poses.length > 0) {
-    for (let j = 0; j < poses2[i].skeleton.length; j++) {
+    for (let j = 0; j < poses2[0].skeleton.length; j++) {
       let partA = poses2[0].skeleton[j][0];
       let partB = poses2[0].skeleton[j][1];
       ctx2.beginPath();

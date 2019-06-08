@@ -63,8 +63,8 @@
             <div id="agora_local"></div>
         </div>
     </div-->
-    <canvas id="canvas" width="250" height="250"></canvas> 
-    <canvas id="canvas2" width="250" height="250"></canvas> 
+    <canvas id="canvas" width="500" height="500"></canvas> 
+    <canvas id="canvas2" width="500" height="500"></canvas> 
 <div id="video" style="margin:0 auto;">
     <div id="agora_local" style="float:right;width:100px;height:100px;display:inline-block;"></div>
 </div>
@@ -191,12 +191,12 @@ function join() {
     console.log("The other id is ",stream.getId())
 // PoseNet code
 var video = document.getElementById('video'+stream.getId());
-video.width=250;
-video.height=250;
+video.width=500;
+video.height=500;
 
 var local_video=document.getElementById('video'+uid);
-local_video.width=250;
-local_video.height=250;
+local_video.width=500;
+local_video.height=500;
 video.addEventListener('play', function () {
         console.log("#remoteVideo play");
       
@@ -210,9 +210,9 @@ let poses = [];
 let poses2=[];
 function drawCameraIntoCanvas() {
   // Draw the video element into the canvas
-  ctx.drawImage(local_video, 0, 0, 250, 250);
+  ctx.drawImage(local_video, 0, 0, 500, 500);
 
-  ctx2.drawImage(video, 0, 0, 250, 250)
+  ctx2.drawImage(video, 0, 0, 500, 500)
   // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
   drawSkeleton();

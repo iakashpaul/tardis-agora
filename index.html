@@ -46,7 +46,7 @@ Host: <input id="video" type="checkbox" checked></input>
     </div-->
 
 <div id="video" style="margin:0 auto;">
-    <div id="agora_local" style="float:right;width:210px;height:147px;display:inline-block;"></div>
+    <div id="agora_local" style="float:right;width:500px;height:auto;display:inline-block;"></div>
 </div>
 
 <script language="javascript">
@@ -165,7 +165,7 @@ function join() {
     var stream = evt.stream;
     console.log("Subscribe remote stream successfully: " + stream.getId());
     if ($('div#video #agora_remote'+stream.getId()).length === 0) {
-      $('div#video').append('<div id="agora_remote'+stream.getId()+'" style="float:left; width:810px;height:607px;display:inline-block;"></div>');
+      $('div#video').append('<div id="agora_remote'+stream.getId()+'" style="float:left; width:500px;height:auto;display:inline-block;"></div>');
     }
     stream.play('agora_remote' + stream.getId());
   });

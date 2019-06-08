@@ -12,40 +12,40 @@
 <script src="AgoraRTCSDK-2.6.1.js"></script>
 <script src="vendor/jquery.js"></script>
 <script src="js/faker.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <nav>
+    <nav class="red darken-4">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Logo</a>
+          <a href="#" class="brand-logo">&nbsp; &nbsp;   <i class="material-icons">accessibility_new</i>&nbsp; TARDIS | Agora.io Challenge | AngelHack 2019</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
+            <li><a href="https://www.hackathon.io/123843">Contact Us</a></li>
           </ul>
         </div>
       </nav>
             
-<div id="div_device" class="panel panel-default">
-<div class="select input-field">
-<label for="audioSource">Audio source: </label><select  id="audioSource"></select>
+<div id="div_device">
+ 
+<div class="select">
+<label for="audioSource">Audio Source: </label><select  class="browser-default col s12" id="audioSource"></select>
 </div>
-<div class="select input-field">
-<label for="videoSource">Video source: </label><select id="videoSource"></select>
+<div class="select">
+<label for="videoSource">Video Source: </label><select  class="browser-default col s12" id="videoSource"></select>
 </div>
 </div>
 
-<div id="div_join" class="panel panel-default">
-<div class="panel-body">
+<div id="div_join" ><!---class="panel panel-default"-->
+<!-- <div class="panel-body"> -->
 <!-- App ID: <input id="appId" type="text" value="" size="36"></input> -->
 <!-- Channel: <input id="channel" type="text" value="test" size="4"></input> -->
  <input id="video" type="checkbox" checked></input>
-<button id="join" class="btn btn-primary" onclick="join()">Join</button>
-<button id="leave" class="btn btn-primary" onclick="leave()">Leave</button>
-<button id="publish" class="btn btn-primary" onclick="publish()">Publish</button>
-<button id="unpublish" class="btn btn-primary" onclick="unpublish()">Unpublish</button>
+<button id="join" class="btn btn-primary blue darken-3" onclick="join()">Join</button>
+<button id="leave" class="btn btn-primary blue darken-3" onclick="leave()">Leave</button>
+<!-- <button id="publish" class="btn btn-primary deep-purple darken-3" onclick="publish()">Publish</button> -->
+<!-- <button id="unpublish" class="btn btn-primary deep-purple darken-3" onclick="unpublish()">Unpublish</button> -->
 </div>
-</div>
+<!-- </div> -->
 
     <!--style>
     .video__box{width:910px; margin:0 auto; overflow:hidden;}
@@ -203,6 +203,7 @@ function join() {
       console.log(evt.uid + " leaved from this channel");
     }
   });
+  publish()
 }
 
 function leave() {
@@ -212,6 +213,7 @@ function leave() {
   }, function (err) {
     console.log("Leave channel failed");
   });
+  unpublish()
 }
 
 function publish() {

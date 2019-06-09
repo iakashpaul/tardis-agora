@@ -1,4 +1,4 @@
-# TARDIS | Agora.io Challenge
+# ![TARDIS](https://github.com/iakashpaul/tardis-agora/raw/master/favicon.jpg "TARDIS") TARDIS | Agora.io Challenge
 
 ## Team : Taha K, Akash Paul
 
@@ -22,7 +22,7 @@ We've used Agora.io stack to help people learn, instruct others & participate in
 
 - Voila, it is going to be hosted at your subdomain on surge.sh, visit it over https
 
-## Modules used,
+## Modules used
 
 - Agora.io, [Token Server for Agora](https://github.com/AgoraIO-Community/TokenServer-nodejs) on heroku at [https://tardis-demo.herokuapp.com/access_token?channel=test&uid=1234](https://tardis-demo.herokuapp.com/access_token?channel=test&uid=1234)
 

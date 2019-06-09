@@ -8,7 +8,7 @@ We've used Agora.io stack to help people learn, instruct others & participate in
 
 - Youtube: [https://youtu.be/sN4ITLhJ5zs](https://youtu.be/sN4ITLhJ5zs)
 
-- Github: [https://github.com/tardis-agora](https://github.com/tardis-agora)
+- Github: [https://github.com/iakashpaul/tardis-agora](https://github.com/iakashpaul/tardis-agora)
 
 - Demo: [https://tardis-agora.surge.sh](https://tardis-agora.surge.sh)
 

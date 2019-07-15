@@ -1,6 +1,4 @@
-# ![TARDIS](https://github.com/iakashpaul/tardis-agora/raw/master/favicon.jpg "TARDIS") TARDIS | Agora.io Challenge
-
-## Team : Taha K, Akash Paul
+# ![TARDIS](https://github.com/iakashpaul/tardis-agora/raw/master/favicon.jpg "TARDIS") AVATAR TARDIS | Agora.io Challenge
 
 ## About
 

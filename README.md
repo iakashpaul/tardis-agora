@@ -4,7 +4,7 @@
 
 We've used Agora.io stack to help people learn, instruct others & participate in immersive AR experiences without requiring costly hardware & delivered via a webpage for PC/Android browsers. Selling hosting & add-ons would be another way for developers to create more use cases with our product by incorporating human pose detection data which is being performed on the device itself
 
-- Youtube: [https://youtu.be/sN4ITLhJ5zs](https://youtu.be/sN4ITLhJ5zs)
+- Youtube: [https://www.youtube.com/watch?v=Q110FkMHEJQ](https://www.youtube.com/watch?v=Q110FkMHEJQ)
 
 - Github: [https://github.com/iakashpaul/tardis-agora](https://github.com/iakashpaul/tardis-agora)
 
@@ -30,4 +30,4 @@ We've used Agora.io stack to help people learn, instruct others & participate in
 
 # Media
 
-[![TARDIS VIDEO](http://img.youtube.com/vi/sN4ITLhJ5zs/0.jpg)](http://www.youtube.com/watch?v=sN4ITLhJ5zs)
+[![TARDIS VIDEO](http://img.youtube.com/vi/Q110FkMHEJQ/0.jpg)](https://www.youtube.com/watch?v=Q110FkMHEJQ)
